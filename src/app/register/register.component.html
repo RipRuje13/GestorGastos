@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestor de Gastos</title>
+        <link rel="stylesheet" href="css/stylesForms.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <h1>Registro</h1>
+            <input type="text" name="nameUser" placeholder="Nombre Completo" required>
+            <input type="email" name="emailRegister" placeholder="Correo Electronico" required>
+            <input type="email" name="emailConfirmRegister" placeholder="Confirmar Correo Electronico" required>
+            <input type="password" name="pwdRegister" placeholder="Contraseña" required>
+            <input type="password" name="pwdConfirmRegister" placeholder="Confirmar Contraseña" required>
+            <input type="date" name="fecha_nacimiento" required>
+            <select name="gender" id="gender" required>
+                <option value="">Selecciona género</option>
+                <option value="masculino">masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="another">Otro</option>
+            </select>
+            <input type="submit" value="Registrarse">
+        </div>
+    </body>
+</html>
