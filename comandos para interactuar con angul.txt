@@ -1,0 +1,26 @@
+*comandos para interactuar con angular*
+
+1.- crear proyecto
+ng new nombre-del-proyecto
+
+2.- iniciar servidor del proyecto
+ng serve -o
+
+3.- agregar nuevos componente
+ng generate component mi-componente
+
+4.- para abrir proyectos descargados
+npm install (asegurarse de estar dentro del proyecto descargado)
+
+5.- instalar bootstrap y popperjs
+npm install bootstrap @popperjs/core
+
+6.- configurar las rutas de bootstrap y popperjs dentro de angular.json
+        "styles": [
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "src/styles.css"
+        ],
+        "scripts": [
+        "node_modules/@popperjs/core/dist/umd/popper.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+        ]

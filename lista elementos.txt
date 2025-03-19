@@ -1,0 +1,79 @@
+1. Autenticación
+Login
+Formulario con:
+Correo electrónico
+Contraseña
+Botón "Iniciar Sesión"
+Enlace "¿Olvidaste tu contraseña?"
+Botón "Registrarse"
+Integración con autenticación OAuth (Google, Facebook, etc.) (opcional)
+
+Registro (Sign Up)
+Formulario con:
+Nombre
+Correo electrónico
+Contraseña
+Confirmación de contraseña
+Botón "Registrarse"
+Mensaje de validación y errores
+
+Recuperación de Contraseña
+Formulario para ingresar correo electrónico
+Envío de enlace para restablecer contraseña
+
+2. Dashboard (Panel Principal)
+Vista general de ingresos y gastos
+Gráficos interactivos:
+Gráfico de pastel para categorías de gastos
+Gráfico de línea para tendencias de ingresos/gastos
+Barra de progreso para presupuesto mensual
+Últimos movimientos (lista de transacciones recientes)
+
+3. Gestión de Transacciones
+Agregar Ingreso/Gasto
+Formulario con:
+Monto
+Categoría (Alimentación, Entretenimiento, Transporte, etc.)
+Fecha
+Método de pago (Efectivo, Tarjeta, Transferencia, etc.)
+Notas (opcional)
+Botón "Guardar"
+
+Lista de Transacciones
+Tabla con:
+Monto
+Categoría
+Fecha
+Método de pago
+Opciones: Editar / Eliminar
+
+Filtrado y Búsqueda
+Filtrar por categoría, fecha y método de pago
+Barra de búsqueda para encontrar transacciones
+
+4. Reportes y Estadísticas
+Resumen Mensual con totales de ingresos y gastos
+Comparación entre meses
+Gráficos de tendencias para detectar patrones de gasto
+Exportación de datos en PDF o CSV
+
+5. Presupuesto y Alertas
+Establecer límite de gasto mensual
+Alertas por correo o notificación cuando se acerque al límite
+Comparación entre gasto real y presupuesto asignado
+
+6. Configuración de Usuario
+Editar perfil (nombre, foto, email, contraseña)
+Cambiar moneda y preferencias de idioma
+Habilitar autenticación de dos factores (opcional)
+Opciones de eliminación de cuenta
+
+7. Administración (para usuarios avanzados o admins) (Opcional)
+Gestión de usuarios (en caso de que sea multiusuario)
+Configuración de categorías predefinidas
+Registro de actividad del usuario
+
+8. Extras Opcionales (para mejorar la experiencia)
+Modo oscuro/claro
+Sincronización con API bancaria (si se quiere automatizar datos)
+App móvil con PWA (para acceder desde cualquier dispositivo)

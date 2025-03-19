@@ -4,10 +4,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
+import { TxManagementComponent } from './tx-management/tx-management.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, LoginComponent, RegisterComponent, ForgotPwdComponent],
+  imports: [RouterOutlet, HomeComponent, LoginComponent, RegisterComponent, ForgotPwdComponent, TxManagementComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
