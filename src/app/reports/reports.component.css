@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 18%;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: #34495e;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #2980b9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#bar-chart, #pie-chart, #line-chart, #scatter-chart, #area-chart, #stacked-bar-chart {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: 0.3s;
+    height: 350px;
+}
+
+#bar-chart:hover, #pie-chart:hover, #line-chart:hover, 
+#scatter-chart:hover, #area-chart:hover, #stacked-bar-chart:hover {
+    transform: translateY(-5px);
+}

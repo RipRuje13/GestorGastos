@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  /* Estilos para el formulario */
+  #formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  #formulario input[type="text"],
+  #formulario input[type="number"],
+  #formulario input[type="date"],
+  #formulario select,
+  #formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  #formulario input[type="button"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #formulario input[type="button"]:hover {
+    background-color: #218838;
+  }
+
+  #formulario textarea {
+    resize: vertical;
+  }
+
+ /* Estilos para la tabla */
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Borde para todas las celdas */
+  }
+
+  table thead {
+    background-color: #28a745;
+    color: white;
+  }
+
+  table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Estilos para el pie de la tabla */
+  tfoot td {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    border: 1px solid #ddd; /* Borde para la celda del pie */
+  }

@@ -1,42 +1,45 @@
 <h1>Gestion de transacciones</h1>
-<input type="button" id="income" name="income" value="Ingresos">
-<input type="button" id="expenditure" name="expenditure" value="Gastos">
-<input type="text" id="tittle" name="tittle" placeholder="Titulo" required>
-<input type="number" id="mount" name="mount" placeholder="Monto $" required>
-<select name="category" id="category" required>
-    <option value="" disabled selected>Categoría</option>
-    <option value="taxes">Impuestos</option>
-    <option value="food">Comida</option>
-    <option value="healt">Salud</option>
-    <option value="home">Hogar</option>
-    <option value="transport">Transporte</option>
-    <option value="education">Educación</option>
-    <option value="suscription">Subscripciones</option>
-    <option value="entertainment">Entretenimento</option>
-    <option value="clothes">Ropa y Calzado</option>
-    <option value="savings">Ahorro e Inversiones</option>
-    <option value="insurance">Seguros</option>
-    <option value="debts">Deudas</option>
-    <option value="care">Cuidado personal</option>
-    <option value="travel">Viajes</option>
-    <option value="gifs">Regalos y Donaciones</option>
-    <option value="pets">Mascotas</option>
-    <option value="another-category">Otros gastos</option>
-</select>
-<input type="date" id="date" name="date" placeholder="Fecha" required>
-<select name="methodpay" id="methodpay" required>
-    <option value="" disabled selected>Forma de pago</option>
-    <option value="cash">Efectivo</option>
-    <option value="card">tarjeta Credito/Debito</option>
-    <option value="digitalMethod">Metodo Digital</option>
-    <option value="another">Otro</option>
-</select>
-<textarea id="description" name="description" placeholder="Descripción" rows="2" style="resize: both;"></textarea>
-<input type="button" id="save" name="save" value="Guardar">
+<div id="formulario">
+    <input type="button" id="income" name="income" value="Ingresos">
+    <input type="button" id="expenditure" name="expenditure" value="Gastos">
+    <input type="text" id="tittle" name="tittle" placeholder="Titulo" required>
+    <input type="number" id="mount" name="mount" placeholder="Monto $" required>
+    <select name="category" id="category" required>
+        <option value="" disabled selected>Categoría</option>
+        <option value="taxes">Impuestos</option>
+        <option value="food">Comida</option>
+        <option value="healt">Salud</option>
+        <option value="home">Hogar</option>
+        <option value="transport">Transporte</option>
+        <option value="education">Educación</option>
+        <option value="suscription">Subscripciones</option>
+        <option value="entertainment">Entretenimento</option>
+        <option value="clothes">Ropa y Calzado</option>
+        <option value="savings">Ahorro e Inversiones</option>
+        <option value="insurance">Seguros</option>
+        <option value="debts">Deudas</option>
+        <option value="care">Cuidado personal</option>
+        <option value="travel">Viajes</option>
+        <option value="gifs">Regalos y Donaciones</option>
+        <option value="pets">Mascotas</option>
+        <option value="another-category">Otros gastos</option>
+    </select>
+    <input type="date" id="date" name="date" placeholder="Fecha" required>
+    <select name="methodpay" id="methodpay" required>
+        <option value="" disabled selected>Forma de pago</option>
+        <option value="cash">Efectivo</option>
+        <option value="card">tarjeta Credito/Debito</option>
+        <option value="digitalMethod">Metodo Digital</option>
+        <option value="another">Otro</option>
+    </select>
+    <textarea id="description" name="description" placeholder="Descripción" rows="2" style="resize: both;"></textarea>
+    <input type="button" id="save" name="save" value="Guardar">    
+</div>
 
 <table border="1">
     <thead>
         <tr>
+            <th>Titulo</th>
             <th>Monto</th>
             <th>Categoría</th>
             <th>Fecha</th>
@@ -46,6 +49,7 @@
     </thead>
     <tbody>
         <tr>
+            <th>Plantilla titulo</th>
             <th>plantilla monto</th>
             <th>plantilla categoria</th>
             <th>plantilla Fecha</th>
