@@ -1,0 +1,10 @@
+<div class="sidebar" [class.expanded]="isExpanded" *ngIf="isVisible">
+    <div class="sidebar-toggle" (click)="toggleSidebar()">
+      {{ isExpanded ? '◄' : '►' }}
+    </div>
+    <ul>
+      <li>Panel Principal</li>
+      <li>Gestor Transacciones</li>
+      <li>Reportes</li>
+    </ul>
+  </div>

@@ -1,17 +1,31 @@
-import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, PLATFORM_ID, Inject, OnDestroy } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import ApexCharts from 'apexcharts';
+import { SidebarService } from '../services/sidebar.service';
+import { Subscription } from 'rxjs';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-reports',
-  imports: [],
+  imports: [SidebarComponent,CommonModule],
   templateUrl: './reports.component.html',
-  styleUrl: './reports.component.css'
+  styleUrls: ['./reports.component.css',]
 })
-export class ReportsComponent implements OnInit  {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+export class ReportsComponent implements OnInit, OnDestroy  {
+
+  private sidebarSubscription!: Subscription;
+  isVisible = true;
+  sidebarExpanded = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+  private sidebarService: SidebarService
+  ) {}
 
   ngOnInit() {
+
+    this.sidebarService.show();
+
     if (isPlatformBrowser(this.platformId)) {
       // Importación dinámica SOLO en el navegador
       import('apexcharts').then((ApexCharts) => {
@@ -21,6 +35,15 @@ export class ReportsComponent implements OnInit  {
       });
     }
   }
+
+  ngOnDestroy() {
+    this.sidebarService.hide();
+    if(this.sidebarSubscription){
+      this.sidebarSubscription.unsubscribe();
+    }
+  }
+
+
 
   renderCharts(ApexCharts: any) {
     // Gráfico de Barras (Gastos vs Ingresos)

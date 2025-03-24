@@ -1,4 +1,9 @@
 /* Estilos generales */
+.form-container {
+  display: flex;
+  height: 100vh;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -96,3 +101,43 @@ body {
     color: #777;
     border: 1px solid #ddd; /* Borde para la celda del pie */
   }
+
+  /* Sidebar */
+.sidebar {
+  width: 18%;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #34495e;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  transition: margin-left 0.3s;
+}
+
+.main-content.sidebar-expanded {
+  margin-left: 200px;
+}
