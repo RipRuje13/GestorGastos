@@ -1,6 +1,6 @@
 <div class="form-container">
-    <app-sidebar *ngIf="isVisible"></app-sidebar>
-    <main class="main-content" [class.expanded]="sidebarExpanded">
+    <app-sidebar *ngIf="isVisible" (toggle)="onSidebarToggle($event)"></app-sidebar>
+    <main class="main-content" [class.sidebar-expanded]="sidebarExpanded">
     <h1>Gestion de transacciones</h1>
     <div id="formulario">
         <input type="button" id="income" name="income" value="Ingresos">

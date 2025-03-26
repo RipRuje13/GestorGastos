@@ -43,7 +43,9 @@ export class ReportsComponent implements OnInit, OnDestroy  {
     }
   }
 
-
+  onSidebarToggle(expanded: boolean){
+    this.sidebarExpanded = expanded;
+  }
 
   renderCharts(ApexCharts: any) {
     // Gráfico de Barras (Gastos vs Ingresos)

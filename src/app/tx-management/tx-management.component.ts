@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { SidebarService } from '../services/sidebar.service';
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './tx-management.component.html',
   styleUrls: ['./tx-management.component.css']
 })
-export class TxManagementComponent {
+export class TxManagementComponent implements OnInit, OnDestroy {
   
   private sidebarSubscription!: Subscription;
   isVisible = true;
@@ -29,8 +29,9 @@ export class TxManagementComponent {
     }
   }
 
-  toggleSidebar() {
-    this.sidebarExpanded = !this.sidebarExpanded;  // Alternar el estado
+  onSidebarToggle(expanded: boolean){
+    this.sidebarExpanded = expanded;
+    
   }
 
 }

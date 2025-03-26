@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';
 import { Subscription } from 'rxjs';
@@ -14,11 +14,9 @@ export class SidebarComponent implements OnInit, OnDestroy {
   isVisible = false;
   private subscription!: Subscription;
 
-  constructor(private sidebarService: SidebarService){
-    this.sidebarService.isVisible$.subscribe(visible =>{
-      this.isVisible = visible;
-    });
-  }
+  @Output() toggle = new EventEmitter<boolean>();
+
+  constructor(private sidebarService: SidebarService){}
 
    ngOnInit() {
     this.subscription = this.sidebarService.isVisible$.subscribe(visible => {
@@ -32,5 +30,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   toggleSidebar(){
     this.isExpanded = !this.isExpanded;
+    this.toggle.emit(this.isExpanded);
   }
 }
