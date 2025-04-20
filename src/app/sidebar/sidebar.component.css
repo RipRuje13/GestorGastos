@@ -1,5 +1,5 @@
 .sidebar {
-    width: 60px;
+    width: 60px; /* Adjust width to show only icons */
     height: 100vh;
     background-color: #333;
     color: white;
@@ -8,25 +8,47 @@
     left: 0;
     top: 0;
     overflow-x: hidden;
-  }
-  
-  .sidebar.expanded {
+}
+
+.sidebar.expanded {
     width: 200px;
-  }
-  
-  .sidebar-toggle {
+}
+
+.sidebar-toggle {
     padding: 10px;
     cursor: pointer;
     text-align: center;
-  }
-  
-  ul {
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  li {
-    padding: 10px;
+}
+
+li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Adjust padding to center icons vertically */
     white-space: nowrap;
-  }
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensure li takes full width */
+}
+
+li i {
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+.sidebar .nav-pills li i {
+    font-size: 2em; /* Adjust icon size */
+}
+
+.sidebar .nav-pills li span {
+    display: inline; /* Show text */
+}
+
+/* New hover effect */
+li:hover {
+    background-color: #555; /* Change to a lighter shade on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}

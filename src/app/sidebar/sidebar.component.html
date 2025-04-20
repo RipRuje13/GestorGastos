@@ -3,9 +3,21 @@
       {{ isExpanded ? '◄x' : 'x►' }}
     </div>
     <ul class="nav nav-pills">
-      <li><i class="bi bi-house" style="font-size: 2em;"></i> Panel Principal</li>
-      <li><i class="bi bi-arrow-down-up"style="font-size: 2em;"></i> Gestor Transacciones</li>
-      <li><i class="bi bi-graph-up"style="font-size: 2em;"></i> reportes</li>
-      <li><i class="bi bi-file-bar-graph"style="font-size: 2em;"></i> coming soon...</li>
+      <li [routerLink]="'/home'" routerLinkActive="active">
+        <i class="bi bi-house" style="font-size: 3em;"></i>
+        <span>Panel Principal</span>
+      </li>
+      <li [routerLink]="'/tx-management'" routerLinkActive="active">
+        <i class="bi bi-arrow-down-up" style="font-size: 3em;"></i>
+        <span>Gestor Transacciones</span>
+      </li>
+      <li [routerLink]="'/reports'" routerLinkActive="active">
+        <i class="bi bi-graph-up" style="font-size: 3em;"></i>
+        <span>Reportes</span>
+      </li>
+      <li [routerLink]="'/login'" routerLinkActive="active">
+        <i class="bi bi-file-bar-graph" style="font-size: 3em;"></i>
+        <span>Coming Soon...</span>
+      </li>
     </ul>
-  </div>
+</div>
